@@ -62,6 +62,7 @@ while(len(open)!=0):
 
     # 2分岐できるものの中でジニ不純度が最小になる属性を取得する。
     if len(attrs) == 1:
+        attr = min(attrs, key=lambda x: attrs[x]["zini"])
         continue
     else:
         attrs_copy = attrs
